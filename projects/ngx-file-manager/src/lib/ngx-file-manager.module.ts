@@ -11,6 +11,6 @@ import { NgxFileManagerComponent } from './ngx-file-manager.component';
   ],
   exports: [
     NgxFileManagerComponent
-  ]
+  ],
 })
 export class NgxFileManagerModule { }
