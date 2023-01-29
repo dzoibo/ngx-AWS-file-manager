@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { NgxFileManagerComponent } from './ngx-file-manager.component';
+import { NgxFileManagerService } from './ngx-file-manager.service';
 
 
 
@@ -12,5 +13,6 @@ import { NgxFileManagerComponent } from './ngx-file-manager.component';
   exports: [
     NgxFileManagerComponent
   ],
+  providers:[NgxFileManagerService],
 })
 export class NgxFileManagerModule { }

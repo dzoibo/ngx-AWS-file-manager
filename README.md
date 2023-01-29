@@ -27,3 +27,5 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 # ngx-AWS-file-manager
 An angular library that you can install to upload your file in a bucket amazon s3
+to using this library you must have a aws account or be added as a user in some account 
+After install this library in your angular project, add this line "(window as any).global = window;" in the prolyfills.ts file of your project.

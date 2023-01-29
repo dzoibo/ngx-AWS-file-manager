@@ -1,11 +1,11 @@
 {
-  "name": "ngx-file-manager",
+  "name": "@dzoibo/ngx-file-manager",
   "author": {
     "name": "DZOIBO Ivan",
     "email": "ivandztitan@gmail.com",
     "url":"https://github.com/dzoibo"
   },
-  "version": "0.0.1",
+  "version": "1.0.5",
   "peerDependencies": {
     "@angular/common": "^14.2.0",
     "@angular/core": "^14.2.0"
