@@ -11,6 +11,8 @@ import { CredentialsOptions } from 'aws-sdk/lib/credentials';
 export class NgxFileManagerService {
   isConfigUpdate: boolean;
   $progress!: BehaviorSubject<number>;
+  keyId!: string;
+  secretId!: string;
 
   constructor() {
     this.$progress=new BehaviorSubject(0);
@@ -18,12 +20,20 @@ export class NgxFileManagerService {
   }
 
   /**
+   * set the credentials that must be used foreach connexion to the bucked
+   */
+  setCredentials(keyId: string, secretId: string){
+    this.keyId=keyId;
+    this.secretId=secretId;
+
+  }
+  /**
       * use to confure file to make it ready to load bzy the browser
       */
-     async uploadMedia(selectedFile: File, keyId: string, secretId: string,bucketName: string,region: string){
+     async uploadMedia(selectedFile: File,bucketName: string,region: string){
       const credentialRequest={
-        accessKeyId:keyId,
-        secretAccessKey: secretId,
+        accessKeyId:this.keyId,
+        secretAccessKey: this.secretId,
       }
       const mediaStreamRequest = this.getFile(selectedFile);
       const [mediaStream]=await Promise.all([mediaStreamRequest]);
